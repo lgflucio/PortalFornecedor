@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailSystem.Net-trunk" Version="2.1.41" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GSW.Framework">
+      <HintPath>bin\Debug\netcoreapp3.1\GSW.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="GSW.Framework.Entity">
+      <HintPath>bin\Debug\netcoreapp3.1\GSW.Framework.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

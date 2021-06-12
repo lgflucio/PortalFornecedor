@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-ServicoWindows-0B2F1B75-16EE-4B0E-878C-EF949AF59218</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.12" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.12" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.29.1" />
+    <PackageReference Include="Tesseract" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj" />
+    <ProjectReference Include="..\BreakCaptcha\BreakCaptcha.csproj" />
+    <ProjectReference Include="..\IoC\IoC.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\WebDrivers\WebDrivers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata\por.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/avro-avsc.json" /></VisualStudio></ProjectExtensions>
+</Project>

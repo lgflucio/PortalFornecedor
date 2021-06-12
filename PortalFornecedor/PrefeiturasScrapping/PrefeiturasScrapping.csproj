@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BreakCaptcha\BreakCaptcha.csproj" />
+    <ProjectReference Include="..\ReadMailBox\ReadMailBox.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GSW.Framework">
+      <HintPath>..\ReadMailBox\bin\Debug\netcoreapp3.1\GSW.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

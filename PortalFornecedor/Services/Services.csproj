@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Selenium.Mozilla.Firefox.Webdriver" Version="0.6.0.1" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\ExceptionHandler\ExceptionHandler.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Utils\Utils.csproj" />
+    <ProjectReference Include="..\WebDrivers\WebDrivers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
